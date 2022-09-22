@@ -27,13 +27,20 @@ a.active {
 
 h1,
 h2,
-h3,
-h4,
-h5,
-h6 {
+h3 {
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
+}
+
+h4, h5, h6{
+    font-family: 고딕;
+    margin: 0;
+}
+
+.about-text{
+    display: flex;
+    justify-content: center;
 }
 
 hr.star-light,
@@ -78,6 +85,15 @@ hr.star-primary:after {
 
 .img-centered {
     margin: 0 auto;
+}
+
+.img-responsive {
+    border-radius: 50%;
+    width: 400px;
+}
+
+.img-project {
+    width:600px;
 }
 
 header {
