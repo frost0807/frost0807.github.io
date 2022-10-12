@@ -13,70 +13,134 @@
     <title>TravelKkaebi</title>
   </head>
   <body>
-    <h5>프로젝트명 : TravelKkaebi</h5>
-    <a
-      style="text-decoration: none"
-      href="https://github.com/frost0807/travelkkaebi"
-      target="_blank"
-      ><h6>상세보기 및 GitHub</h6></a
-    >
-    <hr />
-    <p><strong>진행기간</strong> : 22.08.18 - 22.09.16</p>
-    <p><strong>진행 인원</strong> : 5명</p>
-    <p>
-      <strong>소개</strong> : 다른사람과 여행가고 싶은 사람들을 위한 여행멤버
-      구인 & 여행 정보 커뮤니티 사이트
-    </p>
-    <br />
-    <p>
-      <strong>사용기술</strong> : Java(11), React(18), SpringBoot(2.7.3),
-      SpringSecurity, MyBatis, JPA, MySql, Amazon S3, Github
-    </p>
-    <br />
-    <p>
-      <strong>주요기능</strong> : 회원가입/로그인, 게시판(댓글, 검색, 키워드,
-      이미지), 다중 이미지, 좋아요, 매너온도 등
-    </p>
-    <br />
-    <p>
-      <strong>역할</strong> : 프로젝트 리더, DB설계, 메인화면 최신 게시물리스트,
-      같이가요 게시판 CRUD 외 검색기능 등(Back-End), 좋아요 기능, 매너온도 기능,
-      다중이미지, 내 여행게시판
-    </p>
-    <br />
-    <p><strong>배운점</strong> :</p>
-    <p>
-      - 처음 해보는 협업 프로젝트이지만 프로젝트 리더를 맡아 프로젝트를
-      진행하면서 프로젝트 전반을 기획, 설계, 개발하는 과정을 경험해봤습니다.
-    </p>
-    <p>- 1차, 2차, 3차 정규화를 통해 DB를 설계하는 방법을 알게되었습니다.</p>
-    <p>
-      - @Controller, @Service, @Repository, @Mapper 의 역할에 대해 명확히 알고
-      각 Bean마다 어떤 종류의 로직이 들어가야 하는지 알게 되었습니다.
-    </p>
-    <p>
-      - @RestControllerAdvice를 이용해 Spring의 모든 예외들을 한곳에 모아서
-      처리하는 방법에 대해 알게되었습니다.
-    </p>
-    <p>
-      - Optional클래스에 대해 알게되었고 .OrElseThrow등을 통해 Null값 관련
-      예외를 처리하는 법을 알게되었습니다.
-    </p>
-    <p>
-      - SpringSecurity와 JWT토큰을 이용해 사용자 검증이 필요한 기능의 검증로직을
-      구현하는 방법을 알게되었습니다.
-    </p>
-    <p>
-      - React의 Axios를 이용해 SpringBoot와의 통신을 구현하면서 각 데이터들을
-      어떤형태로 어떤방식으로 주고받는지에 대해 알게되었습니다.
-    </p>
-    <p>
-      - RestApi의 4가지 통신방식(Get, Post, Put, Delete)과 각 통신방식간의
-      차이점에 대해 알게되었습니다.
-    </p>
-    <p>
-      - 여러명의 사용자가 기능을 이용할 때, 어떠한 예외들이 발생하고 그것들을
-      어떻게 처리해야 하는지에 대해 알게되었습니다.
-    </p>
+    <div class="conatiner">
+      <div class="col-lg-12">
+        <h5>프로젝트명 : TravelKkaebi</h5>
+        <a
+          style="text-decoration: none"
+          href="https://github.com/frost0807/travelkkaebi"
+          target="_blank"
+          ><h6>Github 링크</h6></a
+        >
+        <hr />
+        <p><strong>진행기간</strong> : 22.08.18 - 22.09.16</p>
+        <p><strong>진행 인원</strong> : 5명</p>
+        <p>
+          <strong>소개</strong> : 다른사람과 여행가고 싶은 사람들을 위한
+          여행멤버 구인 & 여행 정보 커뮤니티 사이트
+        </p>
+        <br />
+        <p>
+          <strong>사용기술</strong> : Java(11), React(18), SpringBoot(2.7.3),
+          SpringSecurity, MyBatis(2.2.2), JPA, MySql(8.0), Amazon S3, Github
+        </p>
+        <br />
+        <p>
+          <strong>주요기능</strong> : 회원가입/로그인, 게시판(댓글, 검색,
+          키워드, 이미지), 좋아요 등
+        </p>
+        <br />
+        <p>
+          <strong>역할</strong> : 프로젝트 리더, DB설계, 메인화면 최신
+          게시물리스트, 같이가요 게시판 CRUD 외 검색기능 등(Back-End), 좋아요
+          기능, 매너온도 기능, 내 여행게시판
+        </p>
+        <br />
+        <img style="width: 900px" src="../../img/TravelKkaebi_ERD.png" />
+        <p>
+          DB설계 : CS지식이 필요하다고 생각해 DB전공서적을 공부했습니다. 여기서
+          DB를 설계하는 방법에 대해 알게되었고 비록 첫 협업 프로젝트지만 1차,
+          2차, 3차 정규화를 적용하여 DB 테이블들을 설계해봤습니다. 처음에는
+          조금이라도 정규화에 위배되거나 예외가 발생할 가능성이 보인다면
+          테이블을 다 분리 했었지만 이에 따른 Join비용이라는게 발생할 수
+          있다는걸 알고 정규화를 진행하되, 문제 발생 가능성이 현저히 적은
+          테이블들에 대해서는 Single테이블을 사용하였습니다.
+        </p>
+        <br />
+        <img style="width: 320px" src="../../img/joinmelist.png" />
+        <img style="width: 320px" src="../../img/joinmeinsert.png" />
+        <img style="width: 220px" src="../../img/joinmedetail.png" />
+        <p>
+          같이가요 게시판 : 여행할 동행자를 구하고 싶은 사람이 같이가요 게시판에
+          최대인원, 여행지역, 기간 등을 기입해 글을 작성하면, 게시물 작성자와
+          여행 가고 싶은 사람들이 그 글의 상세보기 페이지에서 간단한 Comment와
+          함께 신청을 할 수 있습니다. 그러면 글 작성자는 Nav바의 내게 온 신청서
+          페이지에서 신청서들을 확인하고 마음에 드는 신청서들을 채택합니다.
+          이렇게 해서 인원이 모이면 글 작성자는 게시물 상세보기 페이지에서
+          '마감하기' 버튼을 누르게 되고, 그러면 내 여행 게시판에 글 작성자와
+          채택된 인원들만 볼 수 있는 게시물이 생성됩니다.
+        </p>
+        <br />
+        <p>
+          좋아요 : 같이가요 게시물리스트 페이지나 상세보기 페이지에서 게시물이
+          마음에 들면 좋아요를 클릭 할 수 있습니다. 토글기능입니다.
+        </p>
+        <br />
+        <img style="width: 550px" src="../../img/mytravel.png" />
+        <img style="width: 340px" src="../../img/mytraveldetail.png" />
+        <p>
+          내 여행 게시판 : 같이가요 게시판에서 넘어온 사용자들이 메세지를 주고
+          받을 수 있는 게시판입니다. 각 사용자별로 조회할 수 있는 게시물이
+          제한되어있으며, 상세보기 페이지에서 여행계획관련 세부사항들을 논의할
+          수 있습니다.
+        </p>
+        <br />
+        <p>
+          매너온도 : 유저별로 존재하는 매너온도 수치를 1회에 한해서(+1 혹은 -1)
+          올리거나 내릴 수 있는 기능입니다. 내 여행 게시판의 상세보기에서
+          가능하고 본인의 매너온도는 증감할 수 없습니다.
+        </p>
+        <p><strong>배운점</strong> :</p>
+        <p>
+          - 처음 해보는 협업 프로젝트이지만 프로젝트 리더를 맡아 프로젝트를
+          진행하면서 프로젝트 전반을 기획, 설계, 개발하는 과정을 경험해봤습니다.
+        </p>
+        <p>
+          - DB를 설계할 때 정규화 과정을 통해 데이터의 무결성을 보장할 수 있다는
+          걸 알았고, 과도한 정규화에 따른 Join비용이 발생할 수 있다는것도 알게
+          되었습니다.
+        </p>
+        <p>
+          - SpringBoot의 @Controller, @Service, @Repository, @Mapper 의 역할에
+          대해 명확히 알고 각 Component마다 어떤 종류의 로직이 들어가야 하는지
+          알게 되었습니다.
+        </p>
+        <p>
+          - Lombok의 더 자세한 사용법과 상황에 따른 활용법에 대해서
+          배웠습니다.(@Setter사용을 지양해야된다거나 @Builder패턴 활용 방법 등)
+        </p>
+        <p>
+          - @RestControllerAdvice를 이용해 Spring의 모든 예외들을 한곳에 모아서
+          처리하는 방법에 대해 알게되었습니다.
+        </p>
+        <p>
+          - Optional클래스에 대해 알게되었고 .OrElseThrow(), orElse(),
+          orElseGet()를 통해 Null값 관련 예외를 처리하는 법을
+          알게되었습니다.(아직 공부중입니다.)
+        </p>
+        <p>
+          - SpringSecurity와 JWT토큰을 이용해 사용자 검증이 필요한 기능의
+          검증로직을 구현하는 방법을 알게되었습니다.
+        </p>
+        <p>
+          - React와 SpringBoot와의 RestApi통신을 구현하면서 각 데이터들을
+          ResponseEntity의 형태로 주고 받는 걸 알게되었고, HTTP 상태 코드들이
+          어떤것들인지 알게 되었습니다.
+        </p>
+        <p>
+          - RestApi의 4가지 통신방식(Get, Post, Put, Delete)과 각 통신방식간의
+          차이점에 대해 알게되었습니다.
+        </p>
+        <p>
+          - 여러명의 사용자가 기능을 이용할 때, 어떠한 예외들이 발생하고
+          그것들을 어떻게 처리해야 하는지에 대해 알게되었습니다.
+        </p>
+        <p>
+          - 악의적인 사용자가 기능을 악용하려고 할 때, 어떤방식으로 그걸 방어할
+          수 있는지게 대해 고민해봤고, 검증 로직을 Front-End와 Back-End 양쪽에서
+          촘촘하게 구현해야 한다는걸 알게 되었습니다.
+        </p>
+      </div>
+    </div>
   </body>
 </html>
